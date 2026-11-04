@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Requerimento</title>
+</head>
+<body>
+    <header>
+        <h1>GUIA DE REQUERIMENTO</h1>
+    </header>
+    <main>
+        <form action="/envio" method="post">
+            <label for="protocolo">PROTOCOLO N,º</label>
+            <input type="text" name="protocolo" id="protocolo" required>
+            <br>
+            <label for="requerente">REQUERENTE:</label>
+            <input type="text" name="requerente" id="requerente" required>
+            <br>
+            <label for="matricula">Nº DE MATRÍCULA: </label>
+            <input type="number" name="matricula" id="matricula" required>
+            <br>
+            <label for="nascimento">DATA DE NASCIMENTO</label>
+            <input type="date" name="nascimento" id="nascimento" required>
+            <br>
+            <label for="naturalidade">NATURALIDADE:</label>
+            <input type="text" name="naturalidade" id="naturalidade" required>
+            <br>
+            <label for="filiacao">FILIAÇÃO:</label>
+            <input type="text" name="filiacao" id="filiacao">
+            <br>
+            <label for="curso">CURSO:</label>
+            <select name="curso" id="curso" required>
+                <option value="Eng_Eletrica">Engenharia Elétrica</option>
+                <option value="Eng_Mecanica">Engenharia Mecânica</option>
+                <option value="Sistemas_Informacao">Sistemas de Informação</option>
+                <option value="Mecatronica_Industrial">Mecatrônica Industria</option>
+                <option value="Lic_Fisica">Licenciatura em Física</option>
+                <option value="Lic_Matematica">Licenciatura em Matemática</option>
+                <option value="Tec_Eletrotecnica">Técnico em Eletrotécnica</option>
+                <option value="Tec_Informatica">Técnico em Informática</option>
+                <option value="Tec_Mecanica">Técnico em Mecânica</option>
+                <option value="EJA_Tec_Eletrotecnica">Técnico em Eletrotécnica (EJA)</option>
+            </select>
+            <br>
+            <label for="periodo">PERÍODO:</label>
+            <select name="periodo" id="periodo" required>
+                <option value="S1">S1</option>
+                <option value="S2">S2</option>
+                <option value="S3">S3</option>
+                <option value="S4">S4</option>
+                <option value="S5">S5</option>
+                <option value="S6">S6</option>
+                <option value="S7">S7</option>
+                <option value="S8">S8</option>
+                <option value="S9">S9</option>
+                <option value="S10">S10</option>
+            </select>
+            <br>
+            <spam>TURNO:</spam>
+            <input type="checkbox" name="turno" id="manha" value="manha">
+            <label for="manha">Manhã</label>
+            <input type="checkbox" name="turno" id="tarde" value="tarde">
+            <label for="tarde">Tarde</label>
+            <input type="checkbox" name="turno" id="noite" value="noite">
+            <label for="noite">Noite</label>
+            <br>
+            <label for="telefone">TELEFONE:</label>
+            <input type="tel" name="telefone" id="telefone">
+            <br>
+            <label for="email">E-MAIL:</label>
+            <input type="email" name="email" id="email" required>
+
+            <fieldset>
+                <legend>ASSINALE:</legend>
+            
+                <input type="radio" name="requerido" id="segunda_via" value="segunda_via">
+                <label for="segunda_via">2º Via (especificar)</label>
+                <label for="segunda_via">CCA</label>
+                <br>
+                <input type="radio" name="requerido" id="aproveitamento" value="aproveitamento">
+                <label for="aproveitamento">Aproveitamento de Disciplina (anexar Histórico Escolar e Programa da Disciplina)</label>
+                <label for="aproveitamento">Coordenação do Curso</label>
+                <br>
+                <input type="radio" name="requerido" id="matricula_fora_prazo" value="matricula_fora_prazo">
+                <label for="matricula_fora_prazo">Matrícula fora do prazo (justificar)</label>
+                <label for="matricula_fora_prazo">CCA</label>
+                <br>
+                <input type="radio" name="requerido" id="matricula_cancelar" value="matricula_cancelar">
+                <label for="matricula_cancelar">Cancelar Matrícula</label>
+                <label for="matricula_cancelar">CCA</label>
+                <br>
+                <input type="radio" name="requerido" id="colacao_grau" value="colacao_grau">
+                <label for="colacao_grau">Colação de Grau / Colação Especial (justificar)</label>
+                <label for="colacao_grau">CCA</label>
+                <br>
+                <input type="radio" name="requerido" id="declaracao" value="declaracao">
+                <label for="declaracao">Declaração (especificar)</label>
+                <label for="declaracao">CCA</label>
+                <br>
+                <input type="radio" name="requerido" id="diploma" value="diploma">
+                <label for="diploma">Diploma (especificar)</label>
+                <label for="diploma">CCA</label>
+                <br>
+                <input type="radio" name="requerido" id="historico_escolar" value="historico_escolar">
+                <label for="historico_escolar">Histórico Escolar</label>
+                <label for="historico_escolar">CCA</label>
+                <br>
+                <input type="radio" name="requerido" id="matricula_reabertura" value="matricula_reabertura">
+                <label for="matricula_reabertura">Reabertura de Matrícula</label>
+                <label for="">CCA</label>
+                <br>
+                <input type="radio" name="requerido" id="segunda_chamada" value="segunda_chamada">
+                <label for="segunda_chamada">Segunda Chamada (anexar justificativa e especificar)</label>
+                <label for="segunda_chamada">Coordenação do Curso</label>
+                <br>
+                <input type="radio" name="requerido" id="reingresso" value="reingresso">
+                <label for="reingresso">Reingresso</label>
+                <label for="reingresso">CCA</label>
+                <br>
+                <input type="radio" name="requerido" id="trancamento_disciplina" value="trancamento_disciplina">
+                <label for="trancamento_disciplina">Trancamento de Disciplina (especificar)</label>
+                <label for="trancamento_disciplina">Coordenação dos Cursos</label>
+                <br>
+                <input type="radio" name="requerido" id="trancamento_matricula" value="trancamento_matricula">
+                <label for="trancamento_matricula">Trancamento Matrícula (anexar documentação comprobatória)</label>
+                <label for="trancamento_matricula">Coordenação Pedagógica</label>
+                <br>
+                <input type="radio" name="requerido" id="transferencia" value="transferencia">
+                <label for="transferencia">Transferência para outra Instituição</label>
+                <label for="transferencia">CCA</label>
+                <br>
+                <input type="radio" name="requerido" id="validacao_conhecimento" value="validacao_conhecimento">
+                <label for="validacao_conhecimento">Validação de Conhecimento (especificar)</label>
+                <label for="validacao_conhecimento">Coordenação dos Cursos</label>
+                <br>
+                <input type="radio" name="requerido" id="reajuste" value="reajuste">
+                <label for="reajuste">Reajuste</label>
+                <label for="reajuste">CCA</label>
+                <br>
+                <input type="radio" name="requerido" id="recorrecao_prova" value="recorrecao_prova">
+                <label for="recorrecao_prova">Recorreção de Prova</label>
+                <label for="recorrecao_prova">Coordenação do Curso</label>
+                <br>
+                <input type="radio" name="requerido" id="auxilio_transporte" value="auxilio_transporte">
+                <label for="auxilio_transporte">Auxílio - Transporte</label>
+                <label for="auxilio_transporte">Serviço Social</label>
+                <br>
+                <input type="radio" name="requerido" id="auxilio_moradia" value="auxilio_Moradia">
+                <label for="auxilio_moradia">Auxílio - Moradia</label>
+                <label for="auxilio_moradia">Serviço Social</label>
+                <br>
+                <input type="radio" name="requerido" id="auxilio_oculos" value="auxilio_oculos">
+                <label for="auxilio_oculos">Auxílio - Óculos</label>
+                <label for="auxilio_oculos">Serviço Social</label>
+                <br>
+                <input type="radio" name="requerido" id="auxilio_pais_maes" value="auxilio_pais_maes">
+                <label for="auxilio_pais_maes">Auxílio - Pais e Mães</label>
+                <label for="auxilio_pais_maes">Serviço Social</label>
+                <br>
+                <input type="radio" name="requerido" id="outros" value="outros">
+                <label for="outros">Outros</label>
+                <br>
+                <label for="especificar">ESPECIFICAR:</label>
+                <textarea name="especificar" id="especificar"></textarea>
+                <br>
+                <label for="justificar">JUSTIFICAR:</label>
+                <textarea name="justificar" id="justificar"></textarea>
+            </fieldset>   
+            <h4>DECLARO CONHECER O REGIMENTO DESTA IFE, BEM COMO O PRAZO NECESSÁRIO À TRAMITAÇÃO DO PROCESSO</h4>
+            <input type="text" name="assinatura_requerente" id="assinatura_requerente" required>
+            <label for="assinatura_requerente">REQUERENTE (ASS. LEGÍVEL)</label>
+            <br>
+            <input type="text" name="assinatura_funcionario" id="assinatura_funcionario" required>
+            <label for="assinatura_funcionario">FUNCIONÁRIO (ASS. LEGÍVEL)</label>
+            <br>
+            <label for="local_data">CEDRO-CE</label>
+            <input type="datetime-local" name="local_data" id="local_data" required>
+
+            <fieldset>
+                <legend>VISTO (COORDENAÇÃO DE ASSUNTOS ESTUDANTIS)</legend>
+                <input type="radio" name="chave" id="nao_deve_chave" value="nao_deve_chave">
+                <label for="nao_deve_chave">O requerente NÃO deve chave do armário</label>
+                <br>
+                <input type="radio" name="chave" id="deve_chave" value="deve_chave">
+                <label for="deve_chave">O requerente deve chave do armário:</label>
+                <input type="text" name="chave_armario" id="deve_chave_text">
+                <br>
+                <input type="text" name="assinatura_responsavel_chave" id="assinatura_responsavel_chave">
+                <label for="assinatura_responsavel_chave">RESPONSÁVEL (ASS. LEGÍVEL)</label>
+            </fieldset>
+            <fieldset>
+                <legend>VISTO (BIBLIOTECA)</legend>
+                <input type="radio" name="livro" id="livro" value="nao_deve_livro">
+                <label for="nao_deve_livro">O requerente NÃO deve livros na biblioteca</label>
+                <br>
+                <input type="radio" name="livro" id="deve_livro" value="deve_livro">
+                <label for="deve_livro">O requerente deve livros na biblioteca:</label>
+                <input type="text" name="livro_biblioteca" id="livro_biblioteca_text">
+                <br>
+                <input type="text" name="assinatura_responsavel_livro" id="assinatura_responsavel_livro">
+                <label for="assinatura_responsavel_livro">RESPONSÁVEL (ASS. LEGÍVEL)</label>
+            </fieldset>
+            <br>
+            <input type="submit" value="Enviar Inscrição">
+        </form>
+    </main>
+</body>
+</html>
